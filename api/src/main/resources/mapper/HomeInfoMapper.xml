@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.cloud.panzer.mapper.HomeInfoMapper">
+
+    <resultMap type="HomeShortcut" id="homeShortcutMap">
+        <id column="id" property="id" />
+        <result column="image" property="image" />
+        <result column="type" property="type" />
+        <result column="data" property="data" />
+        <result column="name" property="name" />
+        <result column="color" property="color" />
+    </resultMap>
+
+    <resultMap type="HomeBanner" id="homeBannerMap">
+        <id column="id" property="id" />
+        <result column="image" property="image" />
+        <result column="type" property="type" />
+        <result column="data" property="data" />
+    </resultMap>
+
+    <resultMap type="Goods" id="homeGoodsMap">
+        <id column="good_id" property="id" />
+        <result column="good_name" property="name" />
+        <result column="good_sale_price" property="price" />
+        <result column="good_image" property="image" />
+        <result column="good_origin" property="origin" />
+        <result column="good_count" property="count" />
+    </resultMap>
+
+    <select id="selectAllShortcut" resultMap="homeShortcutMap">
+        SELECT
+            *
+        FROM
+            home_product_set
+        ORDER BY id
+    </select>
+
+    <select id="selectAllBanner" resultMap="homeBannerMap">
+        SELECT
+            *
+        FROM
+            home_banner
+        ORDER BY id
+    </select>
+
+    <select id="selectAllGoods" resultMap="homeGoodsMap">
+        SELECT
+            *
+        FROM
+            goods
+        ORDER BY good_id
+    </select>
+
+</mapper>

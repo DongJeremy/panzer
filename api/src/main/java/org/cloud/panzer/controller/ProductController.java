@@ -12,17 +12,17 @@ import java.util.List;
 @RequestMapping("/product")
 public class ProductController {
 
-    @Resource
-    private ProductService productService;
-
-    /**
-     * 获取产品列表
-     * @return
-     * @throws Exception
-     */
-    @RequestMapping(value = "/list")
-    public ResultBean<List<Product>> products() {
-        List<Product> pList = productService.getProducts();
-        return new ResultBean<>(200, pList);
-    }
+//    @Resource
+//    private ProductService productService;
+//
+//    /**
+//     * 获取产品列表
+//     * @return
+//     * @throws Exception
+//     */
+//    @RequestMapping(value = "/list")
+//    public ResultBean<List<Product>> products() {
+//        List<Product> pList = productService.getProducts();
+//        return new ResultBean<>(200, pList);
+//    }
 }

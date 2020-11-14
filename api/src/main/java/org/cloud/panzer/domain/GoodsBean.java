@@ -15,12 +15,6 @@ public class GoodsBean {
     private String videoPath;
 
     private String goodsJingle;
-
-    private
-
-
-    // 产地
-    private String addressId = "";
     // 产地
     private String cartId = "";
     // 产地
@@ -39,14 +33,6 @@ public class GoodsBean {
     private String rpt = "";
     private String vatHash = "";
     private String voucher = "";
-
-    public String getAddressId() {
-        return addressId;
-    }
-
-    public void setAddressId(String addressId) {
-        this.addressId = addressId;
-    }
 
     public String getCartId() {
         return cartId;

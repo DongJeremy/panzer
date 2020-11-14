@@ -16,15 +16,15 @@ import java.util.List;
 @RequestMapping("/api")
 public class HomeInfoController {
 
-    @Resource
-    HomeInfoService homeInfoService;
-
-    @GetMapping("/v1/index")
-    public ResultBean<HomeModel> getHomeInfo() {
-        List<HomeShortcut> homeShortcuts = homeInfoService.selectAllShortcut();
-        List<Goods> goods = homeInfoService.selectAllGoods();
-        List<HomeBanner> homeBanners = homeInfoService.selectAllBanner();
-        return new ResultBean<>(200, new HomeModel(homeBanners, homeShortcuts, goods));
-    }
+//    @Resource
+//    HomeInfoService homeInfoService;
+//
+//    @GetMapping("/v1/index")
+//    public ResultBean<HomeModel> getHomeInfo() {
+//        List<HomeShortcut> homeShortcuts = homeInfoService.selectAllShortcut();
+//        List<Goods> goods = homeInfoService.selectAllGoods();
+//        List<HomeBanner> homeBanners = homeInfoService.selectAllBanner();
+//        return new ResultBean<>(200, new HomeModel(homeBanners, homeShortcuts, goods));
+//    }
 
 }

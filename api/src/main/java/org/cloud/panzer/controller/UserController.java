@@ -14,12 +14,12 @@ import java.util.List;
 @RequestMapping("/api")
 public class UserController {
 
-    @Resource
-    private UserService userService;
-
-    @GetMapping("/v2/list")
-    public ResultBean<List<SysUser>> users() {
-        List<SysUser> userList = userService.list();
-        return new ResultBean<>(userList);
-    }
+//    @Resource
+//    private UserService userService;
+//
+//    @GetMapping("/v2/list")
+//    public ResultBean<List<SysUser>> users() {
+//        List<SysUser> userList = userService.list();
+//        return new ResultBean<>(userList);
+//    }
 }

@@ -74,7 +74,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         // 基于token，所以不需要session
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().authorizeRequests()
-                .antMatchers("/login", "/api/v1/**").permitAll().anyRequest().authenticated().and().rememberMe()
+                .antMatchers("/login", "/api/v1/**", "/mobile/**").permitAll().anyRequest().authenticated().and().rememberMe()
                 .rememberMeServices(rememberMeServices())
                 .key("INTERNAL_SECRET_KEY")
                 .rememberMeServices(rememberMeServices())
@@ -113,11 +113,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) {
         // 将项目中静态资源路径开放出来
         web.ignoring().antMatchers("/api/v3/api-docs/**",
-                "/uploads/**", "/assets/**", "/",
-                "/api/swagger-ui/**",
-                "/api/swagger-resources/**",
-                "/api/swagger-ui.html",
-                "/webjars/**");
+                "/uploads/**", "/assets/**", "/static/**");
     }
 
 }
